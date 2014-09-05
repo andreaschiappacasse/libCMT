@@ -1,0 +1,26 @@
+Usage:
+
+Running with a video file:
+
+	OpenCMT_test.exe --video=Y:\VideoTestSequences\cmt_dataset\ball\Vid_A_ball.avi
+
+Or using the shortened version of the command-line parameter names:
+
+	OpenCMT_test.exe -v=Y:\VideoTestSequences\cmt_dataset\ball\Vid_A_ball.avi
+
+Running with a video file with a pre-defined bounding box so that the program does not 
+wait for the user to select the bounding box and tracking starts immediately:
+
+	OpenCMT_text.exe -v=Y:\VideoTestSequences\cmt_dataset\ball\Vid_A_ball.avi -tlx=200 -tly=112 -brx=245 -bry=161 
+	
+Specifying a different feature detector type and feature descriptor type:
+
+	OpenCMT_test.exe -dt=Feature2D.FAST -dst=Feature2D.BRISK -mt=BruteForce-Hamming -v="Y:\VideoTestSequences\cmt_dataset\dog1\dog1.wmv"
+
+Running with an image list:
+	
+	OpenCMT_test.exe --image_path="Y:\VideoTestSequences\Cambridge-Gesture database\Set1\0000\0001\frame" --image_num_length=4 --image_extension=jpg --image_start=0 --image_end=56
+	
+Or using the shortened version of the command-line parameter names:
+
+	OpenCMT_test.exe -p="Y:\VideoTestSequences\Cambridge-Gesture database\Set1\0000\0001\frame" -nl=4 -ext=jpg -s=0 -e=56
